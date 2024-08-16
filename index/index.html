@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile view</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+        body{
+           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;  
+        }
+        .mobile-view{
+            width: 381.4px;
+            height: 744px;
+            border: 1px solid rgb(0, 0, 0);
+            background-color: #f5f5f5;
+            border-radius: 40px 40px 40px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .profile-box{
+            background-color: #f9bd44;
+            width: 381.4px;
+            height: 293px;
+            align-items: center;
+            border-radius: 40px 40px 30px 30px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-site{
+            background-color: #f9bd44;
+            width: 100%;
+            height: 98px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+       .profile-image {
+            margin-right: 5px;
+        }
+        .profile-image img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-details {
+            flex: 1;
+        }
+        .profile-details h2 {
+            margin-top: 0;
+            font-weight: 100;
+        }
+
+        .notification-icon {
+            margin-left: 10px;
+            font-size: 10px;
+            color: #666;
+            cursor: pointer;
+            margin-bottom: 1px;
+        }
+        .search-input-container {
+            position: relative;
+            display: flex;
+            justify-content: center; 
+        }
+        .search-input-container img {
+            position: absolute;
+            left: 14px;
+            top: 13px;
+            color: #aaa;
+        }
+        #search-input {
+            width: 331px;
+            height: 45px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding-left: 45px; 
+        }
+        .categories{
+            
+            width: 331.4px;
+            height: 150px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            justify-content: space-between;
+            padding: 1px;
+        }
+        .slider-container {
+            width: 100%;
+        }
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1px;
+        }
+        .slider-header h2 {
+            margin: 0;
+            font-weight: bold;
+            font-size: 23px;
+            
+        }
+
+        .view-all-btn {
+            background-color: transparent;
+            color: #84d0e6;
+            border: none;
+            padding: 5px 5px;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+        .view-all-btn:hover {
+            background-color: transparent;
+        }
+        .slider-content {
+            display: flex;
+            overflow-x: auto; 
+            padding: 20px;
+        }
+        .slide {
+            width: 331.4px;
+            height: 75px; 
+            margin: 3px;
+            border-radius: 20px;
+            font-size: 13px;
+            background-color: #f5f5f5;
+            padding: 18px;
+            
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+            transform: scale(1);
+        }
+        .slide:hover {
+            background-color: #84d0e6;
+            color: white;
+        }
+        .slide img {
+            width: 29px;
+            height: 23px;
+            vertical-align: middle;
+        }
+        .projects-link {
+            width: 331.4px;
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 1px;
+            
+        }
+        
+
+
+
+        .column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  width: 331px;
+  
+}
+
+.box {
+  background-color: #f5f5f5;
+  padding: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  
+}
+
+
+
+.fixed-nav {
+  bottom: 0;
+  left: 0;
+  width: 378.4px;
+  height: 97px;
+  border-radius: 0 0 40px 40px;
+  background-color:#fef2da;
+  color: #f9bd44;
+  padding: 10px;
+  margin-top: 3px;
+  text-align: center;
+  
+  z-index: 1000;
+}
+
+.fixed-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fixed-nav li {
+  margin-right: 20px;
+  width:70px;
+  height:45px;
+  
+}
+.fixed-nav img:hover{
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    z-index: 2;
+}
+
+
+.fixed-nav a{
+  color: #f9bd44;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  vertical-align: middle;
+  z-index: 1;
+}
+.fixed-nav img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    z-index: 2;
+    
+}
+.fixed-nav a:hover {
+  color: #f9bd44;
+}
+        
+@media screen {
+    
+}
+    </style>
+</head>
+<body>
+    <main class="mobile-view">
+        <div class="profile-box">
+            <div class="profile-site">
+                <div class="profile-image">
+                    <img src="./img/Ellipse 17.png" alt="Profile Image">
+                </div>
+                <div class="profile-details">
+                    <h2>Contractor Name </h2>
+                    <p> &#xe01d; Sample Address</p>
+                </div>
+                <div class="notification-icon">
+        
+                    <i class="fas fa-bell"><img src="./img/notification 2.png" alt="notification"></i>
+                </div>
+        
+            </div>
+            <div class="search-input-container">
+                <img src="/img/Search.png" alt="Search icon">
+                <input type="search" id="search-input" placeholder="Search for anything">
+            </div>
+        </div>
+        <div class="categories">
+            <div class="slider-container">
+                <div class="slider-header">
+                    <h2>Categories</h2>
+                    <button class="view-all-btn">View All</button>
+                </div>
+                <div class="slider-content">
+                    <div class="slide">
+                        <img src="./img/grid.png" alt="All Icon">
+                        All
+                    </div>
+                    <div class="slide">
+                        <img src="./img/tools.png" alt="Category 1 Icon">
+                        Category 1
+                    </div>
+                    <div class="slide">
+                        <img src="./img/tools.png" alt="Category 2 Icon">
+                        Category 2
+                    </div>
+                    <div class="slide">
+                        <img src="./img/tools.png" alt="Category 1 Icon">
+                        Category 3
+                    </div>
+                    <div class="slide">
+                        <img src="./img/tools.png" alt="Category 1 Icon">
+                        Category 4
+                    </div>
+                    <div class="slide">
+                        <img src="./img/tools.png" alt="Category 1 Icon">
+                        Category 5
+                    </div>
+                    <div class="slide">
+                        <img src="./img/tools.png" alt="Category 1 Icon">
+                        Category 6
+                    </div>
+                    <div class="slide">
+                        <img src="./img/tools.png" alt="Category 1 Icon">
+                        Category 7
+                    </div>
+                    <div class="slide">
+                        <img src="./img/tools.png" alt="Category 1 Icon">
+                        Category 8
+                    </div>
+                    <div class="slide">
+                        <img src="./img/tools.png" alt="Category 1 Icon">
+                        Category 9
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="projects-link">
+            <div class="slider-container">
+                <div class="slider-header">
+                    <h2 style="font-size: 23px;">Available Projects</h2>
+                    <button class="view-all-btn">View All</button>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+        <div class="column-container">
+            <div class="box">
+                <div class="profile-site" style="background:transparent; border:1px solid #84d0e6; border-radius: 15px; ">
+                    <div class="profile-image">
+                        <img src="./img/pic 1.png"
+                            style="width: 70px; height:70px; border-radius: 17px; margin-top:10px; margin-bottom:10px;"
+                            alt="Profile Image">
+                    </div>
+                    <div class="profile-details">
+                        <h2 style="margin-top:10px; font-weight:600;">Project One </h2>
+                        <p>By Sample Organization</p>
+                        <p style="margin-top:10px; margin-bottom:10px;">Posted 1 Day Ago</p>
+                    </div>
+                </div>
+        
+            </div>
+            <div class="box">
+                <div class="profile-site" style="background:transparent; border:1px solid #84d0e6; border-radius: 15px;">
+                    <div class="profile-image">
+                        <img src="./img/pic 2.jfif"
+                            style="width: 70px; height:70px; border-radius: 17px; margin-top:10px; margin-bottom:10px;"
+                            alt="Profile Image">
+                    </div>
+                    <div class="profile-details">
+                        <h2 style="margin-top:10px; font-weight:600;">Project One </h2>
+                        <p>By Sample Organization</p>
+                        <p style="margin-top:10px; margin-bottom:10px;">Posted 1 Day Ago</p>
+                    </div>
+                </div>
+        
+            </div>
+        
+        </div>
+        <footer>
+            <nav class="fixed-nav">
+                <ul>
+                    <li style="margin-left:30px">
+                        <a href="#">
+                            <img src="/img/home (2).png" alt="home">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/img/project 2.png" alt="project">
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/img/message 2.png" alt="message">
+                            Message
+                        </a>
+                    </li>
+                    <li style="margin-right:30px">
+                        <a href="#">
+                            <img src="/img/settings 2.png" alt="settings">
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </main>
+    
+</body>
+</html>
